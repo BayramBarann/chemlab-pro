@@ -6,7 +6,7 @@ def print_header(title):
 def print_footer():
     print("=" * 28)
 def print_result(label, value, unit):
-    print(f"{label:<8}: {value:.4f} {unit}")
+    print(f"{label}: {value} {unit}")
 def print_error(message):
     print(f"Error: {message}")
 def print_message(message):

@@ -7,12 +7,12 @@ def mole_calculator():
    
 
    while True:
-     
+     fmt.print_header("Mole Calculator")
      mass = get_positive_float("Enter the mass of the substance (in grams): ")
      molecular_mass = get_positive_float("Enter the molar mass of the substance (in g/mol): ")
      moles = mass / molecular_mass
      clear_screen()
-     fmt.print_footer()
+     fmt.print_header("Mole Calculator Results")
      fmt.print_result("Mass (g)", mass, "g")
      fmt.print_result("Molar Mass (g/mol)", molecular_mass, "g/mol")
      fmt.print_result("Amount of Matter (mol)", moles, "mol")

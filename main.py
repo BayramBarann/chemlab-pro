@@ -18,6 +18,9 @@ def main():
             elif choice == "2":
                 from calculators.density import density_calculator
                 density_calculator()
+            elif choice == "3":
+                from calculators.temperature import temperature_calculator
+                temperature_calculator()
             elif choice == "4":
                 fmt.print_exit_message()
                 break
