@@ -1,32 +1,14 @@
 from utils.input import get_float, get_choice
 from utils.screen import clear_screen
 import utils.formatting as fmt
-
-def celsius_to_fahrenheit(celsius):
-    return (celsius * 9/5) + 32
-
-def fahrenheit_to_celsius(fahrenheit):
-    return (fahrenheit - 32) * 5/9
-
-def celsius_to_kelvin(celsius):
-    return celsius + 273.15
-
-def kelvin_to_celsius(kelvin):
-    return kelvin - 273.15
-
-def fahrenheit_to_kelvin(fahrenheit):
-    return (fahrenheit - 32) * 5/9 + 273.15
-
-def kelvin_to_fahrenheit(kelvin):
-    return (kelvin - 273.15) * 9/5 + 32
-
+import chemistry.tempconversions
 CONVERSION = {
-    "1": ("Celsius", "Fahrenheit", celsius_to_fahrenheit),
-    "2": ("Fahrenheit", "Celsius", fahrenheit_to_celsius),
-    "3": ("Celsius", "Kelvin", celsius_to_kelvin),
-    "4": ("Kelvin", "Celsius", kelvin_to_celsius),
-    "5": ("Fahrenheit", "Kelvin", fahrenheit_to_kelvin),
-    "6": ("Kelvin", "Fahrenheit", kelvin_to_fahrenheit)
+    "1": ("Celsius", "Fahrenheit", chemistry.tempconversions.celsius_to_fahrenheit),
+    "2": ("Fahrenheit", "Celsius", chemistry.tempconversions.fahrenheit_to_celsius),
+    "3": ("Celsius", "Kelvin", chemistry.tempconversions.celsius_to_kelvin),
+    "4": ("Kelvin", "Celsius", chemistry.tempconversions.kelvin_to_celsius),
+    "5": ("Fahrenheit", "Kelvin", chemistry.tempconversions.fahrenheit_to_kelvin),
+    "6": ("Kelvin", "Fahrenheit", chemistry.tempconversions.kelvin_to_fahrenheit)
 }
 
 CONVERSION_OPTIONS = [

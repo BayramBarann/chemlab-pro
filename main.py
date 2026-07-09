@@ -9,9 +9,10 @@ def main():
                 "Mole Calculator",
                 "Density Calculator",
                 "Temperature Converter",
+                "Gas Laws",
                 "Exit"
             ])
-            choice = input("Select an option (1-4): ").strip()
+            choice = input("Select an option (1-5): ").strip()
             if choice == "1":
                 from calculators.mole import mole_calculator
                 mole_calculator()
@@ -21,9 +22,13 @@ def main():
             elif choice == "3":
                 from calculators.temperature import temperature_calculator
                 temperature_calculator()
-            elif choice == "4":
+            elif choice == "5":
                 fmt.print_exit_message()
                 break
+
+            elif choice == "4":
+                from calculators.gas.gasmenu import gasmenu
+                gasmenu()
             else:
                 fmt.print_invalid_option_message()
 
