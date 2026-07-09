@@ -1,10 +1,10 @@
 from utils.input import get_positive_float
 from utils.screen import clear_screen
-
+import utils.formatting as fmt
 def mole_calculator():
    
    clear_screen()
-   print("=" * 10 + " Mole Calculation " + "=" * 10)
+   
 
    while True:
      
@@ -12,13 +12,13 @@ def mole_calculator():
      molecular_mass = get_positive_float("Enter the molar mass of the substance (in g/mol): ")
      moles = mass / molecular_mass
      clear_screen()
-     print("\n" + "=" * 28)
-     print(f"{'Mass (g)':<8}: {mass:.4f}")
-     print(f"{'Molar Mass (g/mol)':<8}: {molecular_mass:.4f}")
-     print(f"{'Amount of Matter (mol)':<8}: {moles:.4f}")
-     print("=" * 28)
+     fmt.print_footer()
+     fmt.print_result("Mass (g)", mass, "g")
+     fmt.print_result("Molar Mass (g/mol)", molecular_mass, "g/mol")
+     fmt.print_result("Amount of Matter (mol)", moles, "mol")
+     fmt.print_footer()
      while True:
-            choice = input("Do you want to continue or back to main menu? (y/n): ").strip().lower()
+            choice = fmt.get_continue_prompt()
             if choice in ("y", "yes"):
                 clear_screen()
                 break
