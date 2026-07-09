@@ -4,7 +4,7 @@ def main():
     while True:
         try:
             clear_screen()
-            fmt.print_header("ChemLab Pro")
+            fmt.print_banner()
             fmt.print_menu([
                 "Mole Calculator",
                 "Density Calculator",
