@@ -1,4 +1,5 @@
-from  utils.screen import clear_screen
+from utils.input import get_positive_float
+from utils.screen import clear_screen
 
 def mole_calculator():
    
@@ -7,30 +8,9 @@ def mole_calculator():
 
    while True:
      
-     while True:
-        try:
-            molecular_mass = float(input(f"{'Molar Mass (g/mol)':<16}: "))
-            if molecular_mass <= 0:
-                print("Please insert a positive number")
-                continue
-            break
-        except ValueError:
-            print("Please insert only numbers")
-
-     while True:
-        try:
-             mass = float(input(f"{'Mass (g)':<8}: "))
-             if mass <= 0:
-              print("Please insert a positive number")
-              continue
-             break
-        except ValueError:
-                print("Please insert only numbers")
-
-
+     mass = get_positive_float("Enter the mass of the substance (in grams): ")
+     molecular_mass = get_positive_float("Enter the molar mass of the substance (in g/mol): ")
      moles = mass / molecular_mass
-
-
      clear_screen()
      print("\n" + "=" * 28)
      print(f"{'Mass (g)':<8}: {mass:.4f}")
