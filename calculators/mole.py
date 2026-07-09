@@ -18,10 +18,12 @@ def mole_calculator():
      fmt.print_result("Amount of Matter (mol)", moles, "mol")
      fmt.print_footer()
      while True:
-            choice = fmt.get_continue_prompt()
-            if choice in ("y", "yes"):
-                clear_screen()
-                break
-            if choice in ("n", "no"):
-                clear_screen()
-                return
+        choice = fmt.get_continue_prompt()
+        if choice == 'y':
+            break
+        elif choice == 'n':
+            fmt.print_exit_message()
+            return
+        else:
+            fmt.print_invalid_option_message()
+        

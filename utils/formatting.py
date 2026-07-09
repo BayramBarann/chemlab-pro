@@ -21,6 +21,12 @@ def print_exit_message():
 def print_invalid_option_message():
     print("Invalid option. Please select a valid number.")
 def get_continue_prompt():
-    return input("Do you want to continue or back to main menu? (y/n): ").strip().lower()
+    while True:
+        choice = input("Do you want to perform another calculation? (y/n): ").strip().lower()
+        if choice in ['y', 'n']:
+            return choice
+        else:
+            print("Invalid option. Please enter 'y' or 'n'.")
+    
 def print_welcome_message():
     print("Welcome to ChemLab Pro!")

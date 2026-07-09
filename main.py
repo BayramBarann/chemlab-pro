@@ -15,6 +15,9 @@ def main():
             if choice == "1":
                 from calculators.mole import mole_calculator
                 mole_calculator()
+            elif choice == "2":
+                from calculators.density import density_calculator
+                density_calculator()
             elif choice == "4":
                 fmt.print_exit_message()
                 break
