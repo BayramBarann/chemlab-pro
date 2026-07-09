@@ -11,7 +11,14 @@ def main():
             print("3. Temperature Converter")
             print("4. Exit")
             choice = input("Select an option (1-4): ").strip()
-
+            if choice == "1":
+                from calculators.mole_calculator import mole_calculator
+                mole_calculator()
+            elif choice == "4":
+                print("Exiting...")
+                break
+            else:
+                print("Invalid option. Please select a number between 1 and 4.")
 
         except KeyboardInterrupt:
             print("\nExiting...")
