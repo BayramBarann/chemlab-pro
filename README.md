@@ -18,4 +18,4 @@ ChemLab Pro is an open-source chemistry toolkit developed in Python.
 
 ## Author
 
-Baran Yeşil
+Bayram Baran Yeşil
