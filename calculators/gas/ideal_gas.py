@@ -20,7 +20,11 @@ def ideal_gas_calculator():
             V = get_positive_float("Enter the volume (V) in liters: ")
             P = gas_laws.calculate_pressure(n, T, V)
             clear_screen()
+            fmt.print_footer()
             fmt.print_header("Ideal Gas Law Results")
+            fmt.print_result("Number of Moles (n)", n, "mol")
+            fmt.print_result("Volume (V)", V, "L") 
+            fmt.print_result("Temperature (T)", T, "K")
             fmt.print_result("Pressure (P)", P, "atm")
         elif choice == "2":
             n = get_positive_float("Enter the number of moles (n): ")
@@ -28,8 +32,13 @@ def ideal_gas_calculator():
             P = get_positive_float("Enter the pressure (P) in atm: ")
             V = gas_laws.calculate_volume(n, T, P)
             clear_screen()
+            fmt.print_footer()
             fmt.print_header("Ideal Gas Law Results")
+            fmt.print_result("Pressure (P)", P, "atm")
+            fmt.print_result("Number of Moles (n)", n, "mol")
+            fmt.print_result("Temperature (T)", T, "K")
             fmt.print_result("Volume (V)", V, "L")
+            fmt.print_footer()
         elif choice == "3":
             n = get_positive_float("Enter the number of moles (n): ")
             P = get_positive_float("Enter the pressure (P) in atm: ")
@@ -38,6 +47,10 @@ def ideal_gas_calculator():
             clear_screen()
             fmt.print_header("Ideal Gas Law Results")
             fmt.print_result("Temperature (T)", T, "K")
+            fmt.print_result("Number of Moles (n)", n, "mol")
+            fmt.print_result("Pressure (P)", P, "atm")
+            fmt.print_result("Volume (V)", V, "L")
+            fmt.print_footer()
         elif choice == "4":
             fmt.print_exit_message()
             break

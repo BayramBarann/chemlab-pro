@@ -1,8 +1,12 @@
-R = 0.082057 #L·atm·mol⁻¹·K⁻¹
-
-def calculate_pressure(n, T, V):
-    return (n * R * T) / V
-def calculate_volume(n, T, P):
-    return (n * R * T) / P
-def calculate_temperature(n, P, V):
-    return (P * V) / (n * R)
+def calculate_pressure(volume, moles, temperature):
+    from chemistry.constants import R_ATM
+    pressure = (moles * R_ATM * temperature) / volume
+    return pressure
+def calculate_volume(pressure, moles, temperature):
+    from chemistry.constants import R_ATM
+    volume = (moles * R_ATM * temperature) / pressure
+    return volume
+def calculate_moles(pressure, volume, temperature):
+    from chemistry.constants import R_ATM
+    moles = (pressure * volume) / (R_ATM * temperature)
+    return moles
