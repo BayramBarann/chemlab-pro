@@ -7,10 +7,11 @@ ChemLab Pro is an open-source chemistry toolkit developed in Python.
 - Mole Calculator
 - Density Calculator
 - Temperature Converter
+- Gas Calculator Section
 
 ## Planned Features
 
-- Ideal Gas Calculator
+- Gas Calculators
 - pH Calculator
 - Stoichiometry Calculator
 - Reaction Kinetics
