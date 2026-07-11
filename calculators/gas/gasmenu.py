@@ -19,5 +19,8 @@ def gasmenu():
         if choice == "1":
             from calculators.gas.ideal_gas import ideal_gas_calculator
             ideal_gas_calculator()
+        elif choice == "2":
+            from calculators.gas.van_der_waals import van_der_waals_calculator
+            van_der_waals_calculator()
         elif choice == "6":
             break
